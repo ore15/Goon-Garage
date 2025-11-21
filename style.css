@@ -1,0 +1,222 @@
+/* ========================================================= */
+/* VARIABEL WARNA UNTUK MEMUDAHKAN PENGGANTIAN TEMA WEBSITE  */
+/* ========================================================= */
+:root{
+  --orange:#ff7a00;   /* WARNA UTAMA (ORANGE) UNTUK HEADER & TOMBOL */
+  --dark:#222;        /* WARNA TEKS UTAMA */
+  --muted:#666;       /* WARNA TEKS SEKUNDER (LEBIH PUDAR) */
+  --card-bg:#fff;     /* WARNA BACKGROUND CARD / KOTAK */
+  --page-bg:#fafafa;  /* WARNA BACKGROUND HALAMAN */
+}
+
+/* ========================================================= */
+/* RESET DEFAULT PADA SEMUA ELEMEN AGAR KOTAK RAPI           */
+/* ========================================================= */
+*{
+  box-sizing:border-box; /* MENCEGAH UKURAN BOX MEMBESAR SAAT DIBERI PADDING/BORDER */
+}
+
+/* ========================================================= */
+/* STYLE DASAR BODY (FONT, WARNA, SPASI)                     */
+/* ========================================================= */
+body{
+  margin:0; /* MENGHILANGKAN MARGIN DEFAULT BROWSER */
+  font-family: "Segoe UI", Roboto, Arial, sans-serif; /* FONT UTAMA */
+  background:var(--page-bg); /* WARNA BACKGROUND HALAMAN */
+  color:var(--dark); /* WARNA TEKS UTAMA */
+  line-height:1.45; /* JARAK ANTAR BARIS TEKS */
+}
+
+/* ========================================================= */
+/* BAGIAN HEADER (JUDUL WEBSITE + SUBTITLE + LOGO)           */
+/* ========================================================= */
+/* JUDUL HEADER */
+header{
+  background:var(--orange); /* WARNA LATAR HEADER */
+  color:#fff; /* WARNA TEKS PUTIH */
+  padding:18px 12px; /* JARAK DALAM AGAR HEADER LEBIH RAPAT DAN RAPI */
+  text-align:center; /* MEMBUAT TEKS DI TENGAH */
+}
+
+/* TEKS SUBJUDUL DI BAWAH JUDUL UTAMA */
+header .sub{
+  font-size:13px;
+  opacity:.95; /* SEDIKIT TRANSPARAN UNTUK EFEK LEMBUT */
+}
+
+/* ========================================================= */
+/* NAVIGASI MENU (BERANDA, LAYANAN, MEMBERS, DLL.)           */
+/* ========================================================= */
+nav{
+  display:flex; /* MEMBUAT MENU BERADA DI SATU BARIS */
+  gap:8px; /* JARAK ANTAR MENU */
+  justify-content:center; /* MENU RATA TENGAH */
+  flex-wrap:wrap; /* SUPAYA MENU TIDAK KETARIK KELUAR LAYAR */
+  padding:10px; /* JARAK DALAM */
+  background:#fff; /* WARNA PUTIH SUPAYA BEDA DARI HEADER */
+  border-bottom:1px solid #eee; /* GARIS PEMBATAS BAWAH NAVBAR */
+  position:sticky; /* AGAR NAVBAR NEMPEL DI ATAS SAAT DI-SCROLL */
+  top:0; /* POSISI TEPAT DI ATAS */
+  z-index:10; /* AGAR NAVBAR TIDAK TERTUTUP ELEMEN LAIN */
+}
+
+/* STYLE LINK MENU */
+nav a{
+  text-decoration:none; /* MENGHILANGKAN GARIS BAWAH */
+  color:var(--dark); /* WARNA TEKS */
+  padding:8px 12px; /* JARAK DALAM */
+  border-radius:8px; /* SUDUT MEMBULAT */
+  font-size:14px; /* UKURAN TEKS */
+}
+
+/* EFFECT HOVER PADA MENU */
+nav a:hover{
+  background:#ffedd9; /* WARNA ORANGE MUDA SAAT DI-HOVER */
+}
+
+/* ========================================================= */
+/* CONTAINER UTAMA UNTUK MEMBATASI LEBAR KONTEN              */
+/* ========================================================= */
+.container{
+  max-width:980px; /* BATAS MAKSIMAL LEBAR WEBSITE */
+  margin:20px auto; /* TENGAHKAN OTOMATIS */
+  padding:0 14px; /* JARAK DARI TEPI LAYAR */
+}
+
+/* ========================================================= */
+/* KOTAK CARD UNTUK SETIAP BAGIAN (LAYANAN, INFO, DLL)       */
+/* ========================================================= */
+.card{
+  background:var(--card-bg); /* BACKGROUND PUTIH */
+  border-radius:10px; /* CARD MEMBULAT */
+  padding:14px; /* JARAK DALAM */
+  box-shadow:0 6px 18px rgba(20,20,20,0.04); /* BAYANGAN HALUS */
+  margin-bottom:14px; /* JARAK BAWAH CARD */
+}
+
+/* MENGATUR MARGIN PADA SEMUA JUDUL */
+h1,h2,h3,h4{
+  margin:0 0 10px;
+}
+
+/* PARAGRAF MOTIF (TEKS PUDAR) */
+p.muted{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ========================================================= */
+/* GRID / LAYOUT 2 KOLOM (KONTEN + ASIDE)                    */
+/* ========================================================= */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 300px; /* KOLOM 1 LEBAR, KOLOM 2 KECIL */
+  gap:18px; /* JARAK ANTAR KOLOM */
+}
+
+/* RESPONSIVE: JIKA LAYAR KECIL, JADI 1 KOLOM */
+@media (max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ========================================================= */
+/* FORM INPUT (MEMBERS, KONTAK, LOGIN)                       */
+/* ========================================================= */
+label{
+  display:block; /* LABEL SATU BARIS SENDIRI */
+  font-size:13px;
+  color:var(--muted); /* WARNA PUDAR */
+  margin:8px 0 6px; /* JARAK ATAS DAN BAWAH */
+}
+
+/* STYLE INPUT FORM */
+input, textarea, select, button{
+  width:100%; /* MENGISI SELURUH LEBAR CARD */
+  padding:9px 10px; /* JARAK DALAM */
+  border:1px solid #ddd; /* BORDER TIPIS */
+  border-radius:8px; /* SUDUT MEMBULAT */
+  font-size:14px;
+}
+
+/* STYLE TOMBOL */
+button{
+  background:var(--orange); /* WARNA ORANGE */
+  color:#fff; /* TEKS PUTIH */
+  border:none; /* TANPA BORDER */
+  cursor:pointer; /* CURSOR TANGAN */
+  margin-top:8px; /* JARAK ATAS */
+}
+
+/* ========================================================= */
+/* SISTEM HALAMAN TANPA JAVASCRIPT                          */
+/* ========================================================= */
+.view{
+  display:none; /* SEMUA HALAMAN TERSEMBUNYI */
+}
+
+.view:target{
+  display:block; /* HALAMAN MUNCUL JIKA MENU DIKLIK */
+}
+
+#home{
+  display:block; /* HALAMAN DEFAULT YANG TAMPIL DI AWAL */
+}
+
+/* ========================================================= */
+/* STYLE LIST MEMBER STATIS                                  */
+/* ========================================================= */
+.member-row{
+  padding:8px 6px;
+  border-bottom:1px dashed #f0f0f0;
+}
+
+.muted-small{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ========================================================= */
+/* FOOTER (HAK CIPTA + IKON SOSMED)                          */
+/* ========================================================= */
+footer{
+  text-align:center; /* RATA TENGAH */
+  color:var(--muted); /* WARNA TEKS PUDAR */
+  margin:40px 0 80px; /* JARAK ATAS & BAWAH */
+}
+
+/* CATATAN / PERINGATAN */
+.hint{
+  background:#fff5e6; /* BACKGROUND KUNING LEMBUT */
+  border-left:4px solid var(--orange); /* GARIS KIRI ORANGE */
+  padding:8px; /* JARAK DALAM */
+  border-radius:6px;
+  font-size:13px;
+}
+
+/* TEXT CENTER */
+.center{
+  text-align:center;
+}
+
+/* ========================================================= */
+/* LOGO DI TENGAH HEADER                                     */
+/* ========================================================= */
+.logo {
+  height: 100px;      /* UKURAN LOGO */
+  margin-right: 12px; /* JARAK KANAN */
+  vertical-align: middle; /* SEJAJAR DENGAN TEKS */
+}
+
+/* ========================================================= */
+/* ICON SOSIAL MEDIA DI FOOTER                               */
+/* ========================================================= */
+.footer-icons img {
+  height: 28px;   /* UKURAN ICON */
+  margin: 0 6px;  /* JARAK ANTAR ICON */
+  vertical-align: middle;
+}
+.footer-icons {
+  margin-bottom: 8px; /* JARAK BAWAH GRUP ICON */
+}

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+
+  <!-- MENGATUR WEBSITE AGAR RESPONSIVE DI HP -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- JUDUL YANG MUNCUL DI TAB BROWSER -->
+  <title>Website Bengkel_Simpel</title>
+
+  <!-- MENGHUBUNGKAN FILE CSS UTAMA -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ========================================================= -->
+<!-- HEADER + LOGO (BAGIAN PALING ATAS WEBSITE)                -->
+<!-- ========================================================= -->
+  <header>
+
+    <!-- JUDUL UTAMA WEBSITE -->
+    <h1 style="display:inline-block; vertical-align:middle; height: 50%;">GOON GARAGE</h1>
+
+    <!-- SUBJUDUL / KETERANGAN KECIL DI BAWAH JUDUL -->
+    <div class="sub">Website Bengkel </div>
+
+    <!-- LOGO YANG DITAMPILKAN DI DALAM HEADER -->
+    <img src="tes12.png" class="logo">
+
+  </header>
+
+<!-- ========================================================= -->
+<!-- NAVIGASI MENU (BERANDA, LAYANAN, MEMBERS, DST.)           -->
+<!-- ========================================================= -->
+  <nav>
+    <a href="#home">Beranda</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#members">Members</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#about">Tentang</a>
+    <a href="#contact">Kontak</a>
+    <a href="#login">Login Admin</a>
+  </nav>
+
+  <div class="container">
+
+<!-- ========================================================= -->
+<!-- HALAMAN HOME / BERANDA                                    -->
+<!-- ========================================================= -->
+    <section id="home" class="view">
+
+      <!-- CARD SAMBUTAN -->
+      <div class="card">
+        <h2>Selamat Datang</h2>
+        <p>Kami GOON GARAGE siap melayani masalah permobilan. Jam buka: Senin - Sabtu, 08:00 - 17:00.</p>
+      </div>
+
+      <!-- GRID 2 KOLOM (KONTEN + ASIDE) -->
+      <div class="grid">
+
+        <!-- KOLOM KIRI -->
+        <div>
+
+          <!-- CARD LAYANAN -->
+          <div class="card">
+            <h3>Layanan Unggulan</h3>
+            <ul>
+              <li>Servis mesin</li>
+              <li>Tuning</li>
+              <li>Ganti oli</li>
+              <li>Sparepart original</li>
+            </ul>
+          </div>
+
+          <!-- CARD INFO CEPAT -->
+          <div class="card">
+            <h3>Info Cepat</h3>
+            <p class="muted">Alamat: Jl. WSPEED No.6767, Kota Uniga</p>
+            <p class="muted">Nomor telepon: 0856-789-121</p>
+          </div>
+
+        </div>
+
+        <!-- KOLOM KANAN (ASIDE) -->
+        <aside>
+          <div class="card">
+            <h4>Promo</h4>
+            <p class="muted-small">Saat ini belum ada promo.</p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+<!-- ========================================================= -->
+<!-- HALAMAN LAYANAN MENU                                      -->
+<!-- ========================================================= -->
+    <section id="layanan" class="view">
+      <div class="card">
+        <h2>Daftar Layanan</h2>
+        <p class="muted">Kami melayani berbagai perbaikan dan perawatan kendaraan.</p>
+
+        <!-- LIST LAYANAN -->
+        <ul>
+          <li>Diagnosa mesin</li>
+          <li>Servis umum</li>
+          <li>Tuning</li>
+          <li>Ganti oli</li>
+        </ul>
+      </div>
+    </section>
+
+<!-- ========================================================= -->
+<!-- HALAMAN MEMBERS / FORM DAFTAR MEMBER                      -->
+<!-- ========================================================= -->
+    <section id="members" class="view">
+      <div class="grid">
+
+        <!-- KOLOM KIRI -->
+        <div>
+          <div class="card">
+            <h2>Member Area</h2>
+
+            <!-- FORM INPUT NAMA -->
+            <label>Nama</label>
+            <input placeholder="Nama lengkap">
+
+            <!-- FORM INPUT HP -->
+            <label>No HP</label>
+            <input placeholder="08xxxx">
+
+            <!-- FORM INPUT PLAT -->
+            <label>Plat (opsional)</label>
+            <input placeholder="B 1234 XYZ">
+
+            <!-- TOMBOL FORM -->
+            <button>Daftar (belum berfungsi)</button>
+          </div>
+
+          <!-- CARD MANFAAT MEMBER -->
+          <div class="card">
+            <h3>Manfaat Member</h3>
+            <ul>
+              <li>Diskon servis</li>
+              <li>Antrean prioritas</li>
+              <li>Riwayat servis tersimpan (jika ada di sistem)</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- KOLOM KANAN (DAFTAR MEMBER STATIS) -->
+        <aside>
+          <div class="card">
+            <h4>Daftar Member (Statis)</h4>
+
+            <!-- DATA MEMBER CONTOH -->
+            <div class="member-row">
+              <strong>Sigma</strong>
+              <div class="muted-small">0856xxxx • S 19 MA</div>
+            </div>
+
+            <div class="member-row">
+              <strong>tripitropi</strong>
+              <div class="muted-small">0812xxxx • Z 6767 AA</div>
+            </div>
+
+            <div class="member-row">
+              <strong>dudung</strong>
+              <div class="muted-small">0896xxxx • Tidak ada plat</div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+<!-- ========================================================= -->
+<!-- HALAMAN DASHBOARD ADMIN (STATIS)                         -->
+<!-- ========================================================= -->
+    <section id="dashboard" class="view">
+      <div class="card">
+        <h2>Dashboard Admin </h2>
+
+        <!-- GRID MINI -->
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+
+          <!-- TOTAL MEMBER -->
+          <div class="card" style="flex:1;min-width:160px">
+            <h3>Total Member</h3>
+            <div style="font-size:28px;font-weight:600">2</div>
+            <div class="muted-small">Data contoh</div>
+          </div>
+
+          <!-- MEMBER BARU -->
+          <div class="card" style="flex:1;min-width:160px">
+            <h3>Member Baru</h3>
+            <div class="muted-small">Pak Aleks – 01/10/2025</div>
+            <div class="muted-small">SMA Tarakanita – 20/09/2025</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- ========================================================= -->
+<!-- HALAMAN ABOUT / TENTANG                                  -->
+<!-- ========================================================= -->
+    <section id="about" class="view">
+      <div class="card">
+        <h2>Tentang Bengkel</h2>
+        <p class="muted">GOON GARAGE, bengkel ramah pemula. Dibuat untuk tugas sekolah.</p>
+      </div>
+    </section>
+
+<!-- ========================================================= -->
+<!-- HALAMAN CONTACT / KONTAK                                  -->
+<!-- ========================================================= -->
+    <section id="contact" class="view">
+      <div class="card" style="max-width:700px;margin:auto">
+        <h2>Kontak Kami</h2>
+
+        <!-- FORM NAMA -->
+        <label>Nama</label>
+        <input>
+
+        <!-- FORM PESAN -->
+        <label>Pesan</label>
+        <textarea rows="4"></textarea>
+
+        <!-- TOMBOL KIRIM -->
+        <button>Kirim (Belum Berfungsi)</button>
+      </div>
+    </section>
+
+<!-- ========================================================= -->
+<!-- HALAMAN LOGIN ADMIN                                       -->
+<!-- ========================================================= -->
+    <section id="login" class="view">
+      <div class="card" style="max-width:420px;margin:auto">
+        <h2>Login Admin (Belum Berfungsi)</h2>
+
+        <!-- INPUT USERNAME -->
+        <label>Username</label>
+        <input value="admin">
+
+        <!-- INPUT PASSWORD -->
+        <label>Password</label>
+        <input type="password" value="password123">
+
+        <!-- TOMBOL LOGIN -->
+        <button>Login (Belum Berfungsi)</button>
+      </div>
+    </section>
+
+  </div>
+
+<!-- ========================================================= -->
+<!-- FOOTER / COPYRIGHT + ICON SOSIAL MEDIA                   -->
+<!-- ========================================================= -->
+  <footer>
+
+    <!-- TEKS COPYRIGHT UTAMA -->
+    <div class="center">
+      kopiright 2025 <strong>GOONGARAGE</strong> TM
+    </div>
+
+    <!-- IKON SOSIAL MEDIA -->
+    <div class="footer-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="IG">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="FB">
+    </div>
+
+    <!-- TEKS COPYRIGHT TAMBAHAN -->
+    <div class="center">
+      Copyright
+    </div>
+
+  </footer>
+
+</body>
+</html>
